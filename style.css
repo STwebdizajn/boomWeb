@@ -31,10 +31,10 @@ body {
   /* additional fluid tokens to replace remaining hard px values */
   --landing-height: clamp(500px, 40vw, 754px);
   --info-max-height: clamp(480px, 60vw, 821px);
-  --ghost-right: clamp(120px, 20vw, 700px);
+  --ghost-right: clamp(120px, 38vw, 700px);
   --sarajevo-height: clamp(360px, 60vw, 821px);
-  --info-h3-max-width: clamp(200px, 40vw, 421px);
-  --info-p-max-width: clamp(280px, 60vw, 781px);
+  --info-h3-max-width: clamp(200px, 60vw, 421px);
+  --info-p-max-width: clamp(280px, 80vw, 781px);
   --page-side-padding: clamp(12px, 3vw, 20px);
   --person-base: clamp(160px, 20vw, 200px);
   --person-max-width: clamp(160px, 40vw, 232px);
@@ -633,6 +633,14 @@ input:-webkit-autofill {
     background-position: 20vw 70px;
   }
 
+  #info_container div p {
+    max-width: 100%;
+  }
+  #bone_text {
+    margin-right: 15%;
+    padding-left: 20px;
+  }
+
   #info_container div h3 {
     padding-top: 40px;
     padding-left: 40px;
@@ -674,9 +682,16 @@ input:-webkit-autofill {
 @media only screen and (max-width: 1265px) {
   #menu_items {
     flex-direction: column;
-    top: 100%;
+    top: 166%;
     background: rgba(255, 255, 255, 1);
     transform: translateY(-23%);
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 965px) {
+  #ghost img {
+    max-width: clamp(90%, 90vw, 95%);
   }
 }
 
@@ -724,6 +739,38 @@ input:-webkit-autofill {
   }
 }
 
+@media only screen and (max-width: 570px) {
+  #roster {
+    max-width: 349px;
+  }
+
+  #menu_items.menu-visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  #menu_items {
+    flex-direction: column;
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-35%);
+    width: 101vw;
+    top: 268%;
+    border-radius: 2.5rem;
+
+    padding-right: 0;
+    padding-left: 0;
+    right: -43%;
+  }
+
+  #menu_items.menu-visible {
+    right: 0;
+  }
+
+  #lastItem {
+    padding-bottom: 20px;
+  }
+}
+
 @media only screen and (max-width: 475px) {
   #roster {
     gap: 35px;
@@ -738,23 +785,5 @@ input:-webkit-autofill {
     max-width: 90%;
     right: 0;
     margin-top: 100px;
-  }
-
-  #menu_items.menu-visible {
-    opacity: 1;
-    pointer-events: all;
-    right: -10%;
-  }
-
-  #menu_items {
-    flex-direction: column;
-    background: rgba(255, 255, 255, 1);
-    transform: translateY(-35%);
-    width: 98vw;
-    border-radius: 2.5rem;
-  }
-
-  #lastItem {
-    padding-bottom: 20px;
   }
 }
