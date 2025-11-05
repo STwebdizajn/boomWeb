@@ -5,6 +5,48 @@ body {
   background-color: #fff;
 }
 
+:root {
+  /* fluid spacing and sizes (min, preferred using vw, max) */
+  --header-height: clamp(80px, 6vw, 135px);
+  --date-height: clamp(60px, 6.5vw, 100px);
+  --logo-height: clamp(40px, 5vw, 68px);
+  --menu-gap: clamp(12px, 3vw, 46px);
+  --menu-padding-vertical: clamp(8px, 2vw, 16px);
+  --menu-padding-horizontal: clamp(12px, 3.5vw, 32px);
+  --menu-item-gap: clamp(12px, 3vw, 32px);
+  --landing-mt: clamp(120px, 12vw, 200px);
+  --landing-pt: clamp(12px, 3vw, 20px);
+  --boom-logo-width: clamp(200px, 50vw, 822px);
+  --info-padding-left: clamp(20px, 6vw, 110px);
+  --info-padding-right: clamp(12px, 4vw, 85px);
+  --person-img-h: clamp(120px, 15vw, 192px);
+  --roster-gap: clamp(20px, 6vw, 90px);
+  --time-col: clamp(120px, 18vw, 182px);
+  --time-activity-gap: clamp(8px, 2.5vw, 21px);
+  --schedule-max-width: clamp(320px, 50vw, 554px);
+  --form-input-width: clamp(300px, 80vw, 554px);
+  --submit-width: clamp(75px, 10vw, 133px);
+  --footer-height: clamp(12vw, 12vw, 15vw);
+  --footer-icon-gap: clamp(20px, 10vw, 81px);
+  /* additional fluid tokens to replace remaining hard px values */
+  --landing-height: clamp(500px, 40vw, 754px);
+  --info-max-height: clamp(480px, 60vw, 821px);
+  --ghost-right: clamp(120px, 20vw, 700px);
+  --sarajevo-height: clamp(360px, 60vw, 821px);
+  --info-h3-max-width: clamp(200px, 40vw, 421px);
+  --info-p-max-width: clamp(280px, 60vw, 781px);
+  --page-side-padding: clamp(12px, 3vw, 20px);
+  --person-base: clamp(160px, 20vw, 200px);
+  --person-max-width: clamp(160px, 40vw, 232px);
+  --person-name-mt: clamp(12px, 3vw, 26px);
+  --person-h4-max: clamp(120px, 40vw, 197px);
+  --person-p-max: clamp(180px, 50vw, 267px);
+  --line-height: clamp(20px, 3.6vw, 29px);
+  --schedule-padding-bottom: clamp(80px, 12vw, 150px);
+  --schedule-heading-pt: clamp(28px, 5vw, 78px);
+  --timeevent-maxwidth: clamp(280px, 50vw, 572px);
+}
+
 button {
   background: none; /* remove default background */
   border: none; /* remove border */
@@ -89,7 +131,7 @@ a {
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 135px;
+  height: var(--header-height);
 
   position: fixed; /* sticks to top */
   top: 0;
@@ -100,9 +142,9 @@ a {
 }
 
 #boomHeaderLogo {
-  height: 68px;
+  height: var(--logo-height);
   width: auto;
-  padding-left: 54px;
+  padding-left: var(--info-padding-left);
 }
 
 #menu_container {
@@ -112,7 +154,7 @@ a {
 }
 
 #menuButton {
-  margin-right: 46px;
+  margin-right: var(--menu-gap);
   z-index: 1001;
 }
 
@@ -123,14 +165,14 @@ a {
 #menu_items {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: var(--menu-item-gap);
   position: absolute;
   right: 100%;
   top: 50%;
-  transform: translateY(-52%);
+  transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.95);
-  padding: 16px 32px;
-  border-radius: 8px;
+  padding: var(--menu-padding-vertical) var(--menu-padding-horizontal);
+  border-radius: 0.5rem;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
@@ -139,16 +181,17 @@ a {
 #menu_items.menu-visible {
   opacity: 1;
   pointer-events: all;
-  right: calc(100% + 20px);
+  right: calc(100% + 1.25rem);
 }
 
 .menu-item {
   font-family: "br_omegaregular", sans-serif;
-  font-size: 18px;
+  font-size: clamp(16px, 3vw, 28px);
   color: #1e1e1e;
   text-decoration: none;
   white-space: nowrap;
   transition: color 0.2s ease;
+  font-size: clamp(16px, 1.5vw, 28px);
 }
 
 .menu-item:hover {
@@ -158,12 +201,12 @@ a {
 #header_date_container {
   display: flex;
   position: fixed;
-  top: 135px;
+  top: var(--header-height);
   z-index: 10000;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100px;
+  height: var(--date-height);
   background-color: #f2f2f3;
   transition: top 0.3s ease;
   text-align: center;
@@ -174,6 +217,8 @@ a {
     sans-serif;
   font-weight: bold;
   font-size: clamp(20px, 4vw, 50px);
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* HEADER STYLES -------------------------------*/
@@ -185,14 +230,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 754px;
+  height: var(--landing-height);
   background-image: url("./images/landing_imgs/landingBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-  margin-top: 200px;
-  padding-top: 20px;
+  margin-top: var(--landing-mt);
+  padding-top: var(--landing-pt);
 }
 
 #landing_container h3 {
@@ -208,7 +253,7 @@ a {
 }
 
 #boomLandingLogo {
-  width: clamp(258px, 80vw, 822px);
+  width: var(--boom-logo-width);
   height: auto;
   display: block;
   max-width: none; /* remove the cap */
@@ -242,7 +287,7 @@ a {
   max-width: 100%;
   height: auto;
   display: block;
-  right: 700px;
+  right: var(--ghost-right);
 }
 
 #sarajevoWrapper {
@@ -252,7 +297,7 @@ a {
 
 #sarajevo {
   max-width: 100%;
-  height: 821px;
+  height: var(--sarajevo-height);
   object-fit: cover;
   object-position: center;
   display: block;
@@ -266,10 +311,10 @@ a {
   font-weight: bold;
   font-size: clamp(20px, 8vw, 59.5px);
 
-  max-width: 421px;
+  max-width: var(--info-h3-max-width);
 
-  padding-left: 110px;
-  padding-right: 85px;
+  padding-left: var(--info-padding-left);
+  padding-right: var(--info-padding-right);
 }
 
 #info_container div p {
@@ -278,10 +323,10 @@ a {
   font-weight: 400;
   font-size: clamp(16px, 3vw, 28px);
 
-  max-width: 781px;
+  max-width: var(--info-p-max-width);
 
-  padding-left: 110px;
-  padding-right: 40px;
+  padding-left: var(--info-padding-left);
+  padding-right: clamp(12px, 4vw, 40px);
 }
 
 /* INFO STYLES -------------------------------*/
@@ -306,17 +351,17 @@ a {
 #roster {
   display: flex;
   flex-wrap: wrap;
-  gap: 90px;
+  gap: var(--roster-gap);
   justify-content: center;
   align-items: flex-start;
   padding-bottom: 70px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: var(--page-side-padding);
+  padding-right: var(--page-side-padding);
 }
 
 .person {
-  flex: 1 1 200px; /* grow:1, shrink:1, base width:200px */
-  max-width: 232px;
+  flex: 1 1 var(--person-base); /* grow:1, shrink:1, base width from var */
+  max-width: var(--person-max-width);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -329,7 +374,7 @@ a {
 
 .person img {
   width: 100%;
-  height: 192px;
+  height: var(--person-img-h);
   object-fit: contain;
   object-position: center;
   display: block;
@@ -337,7 +382,7 @@ a {
 
 .person h4 {
   margin: 0;
-  margin-top: 26px;
+  margin-top: var(--person-name-mt);
   font-size: clamp(18px, 5vw, 27px);
   max-width: 197px;
 }
@@ -347,7 +392,7 @@ a {
   text-align: center;
 
   letter-spacing: 0.05em;
-  max-width: 267px;
+  max-width: var(--person-p-max);
 }
 /* MEET STYLES -------------------------------*/
 
@@ -365,16 +410,16 @@ a {
   max-width: 100%;
 
   color: #f2f2f3;
-  letter-spacing: 1.2px;
-  font-size: clamp(12px, 4vw, 24px);
+  letter-spacing: var(--letter-spacing, 1.2px);
+  font-size: clamp(12px, 3vw, 24px);
   font-family: "br_omega300", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
   font-weight: medium;
 
-  line-height: 29px;
-  padding-bottom: 150px;
-  padding-left: 20px;
-  padding-right: 20px;
+  line-height: var(--line-height);
+  padding-bottom: var(--schedule-padding-bottom);
+  padding-left: var(--page-side-padding);
+  padding-right: var(--page-side-padding);
 }
 
 #schedule_container h3 {
@@ -383,7 +428,7 @@ a {
   font-weight: bold;
   font-size: clamp(24px, 5vw + 1rem, 59.5px);
 
-  padding-top: 78px;
+  padding-top: var(--schedule-heading-pt);
   color: #00ade9;
 }
 
@@ -400,14 +445,14 @@ a {
 }
 
 #schedule_day1 {
-  margin-bottom: 20px;
+  margin-bottom: clamp(8px, 3vw, 20px);
 }
 
 .timeEventContainer {
   display: flex;
-  max-width: 572px;
+  max-width: var(--timeevent-maxwidth);
   justify-content: flex-start;
-  gap: 21px;
+  gap: var(--time-activity-gap);
   align-items: flex-start; /* keep time and activity aligned at top */
   width: 100%;
   box-sizing: border-box;
@@ -421,16 +466,16 @@ a {
 
 .time {
   /* fixed column for times so spacing is consistent per row */
-  flex: 0 0 182px;
+  flex: 0 0 var(--time-col);
   width: auto; /* keep width controlled by flex */
-  padding-bottom: 24px;
+  padding-bottom: clamp(12px, 3vw, 24px);
 }
 
 .activity {
   /* activity takes remaining space */
   flex: 1 1 auto;
   max-width: none; /* allow flex to control width */
-  padding-bottom: 24px;
+  padding-bottom: clamp(12px, 3vw, 24px);
 }
 
 .blackText {
@@ -442,10 +487,10 @@ a {
 #schedule_day1,
 #schedule_day2 {
   width: 100%;
-  max-width: 554px;
+  max-width: var(--schedule-max-width);
   box-sizing: border-box;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: clamp(12px, 3vw, 16px);
+  padding-right: clamp(12px, 3vw, 16px);
 }
 
 /* SCHEDULE STYLES -------------------------------*/
@@ -477,11 +522,11 @@ a {
   font-family: "br_omegaregular", sans-serif;
   font-size: clamp(18px, 3vw, 28px);
   color: #1e1e1e;
-  width: clamp(300px, 80vw, 554px);
+  width: var(--form-input-width);
 
   height: clamp(58px, 10vw, 87px);
   margin: 0px;
-  padding-left: clamp(17px, 3vw, 33px);
+  padding-left: clamp(12px, 3vw, 33px);
   background-color: transparent;
   box-sizing: border-box;
 }
@@ -514,7 +559,7 @@ input:-webkit-autofill {
 #submitButton {
   color: #fff;
   background-color: #00aeef;
-  width: clamp(75px, 10vw, 133px);
+  width: var(--submit-width);
   height: clamp(58px, 10vw, 87px);
   font-family: "br_omegablack", sans-serif;
   font-size: clamp(18px, 2vw, 28px);
@@ -545,7 +590,7 @@ input:-webkit-autofill {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  height: 15vw;
+  height: var(--footer-height);
   box-sizing: border-box;
 
   background-image: url("./images/footer_imgs/footerbackground.jpg");
@@ -568,7 +613,7 @@ input:-webkit-autofill {
 #footer_icons {
   display: flex;
 
-  gap: clamp(20px, 10vw, 81px);
+  gap: var(--footer-icon-gap);
 }
 
 .icon {
@@ -675,7 +720,7 @@ input:-webkit-autofill {
     padding-right: 40px;
   }
   .timeEventContainer {
-    gap: 0px;
+    gap: 20px;
   }
 }
 
@@ -693,5 +738,23 @@ input:-webkit-autofill {
     max-width: 90%;
     right: 0;
     margin-top: 100px;
+  }
+
+  #menu_items.menu-visible {
+    opacity: 1;
+    pointer-events: all;
+    right: -10%;
+  }
+
+  #menu_items {
+    flex-direction: column;
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-35%);
+    width: 98vw;
+    border-radius: 2.5rem;
+  }
+
+  #lastItem {
+    padding-bottom: 20px;
   }
 }
