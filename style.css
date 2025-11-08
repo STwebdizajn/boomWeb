@@ -732,7 +732,7 @@ input:focus {
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1385px) {
   #menu_items {
     flex-direction: column;
     top: 166%;
