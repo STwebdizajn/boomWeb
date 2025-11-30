@@ -124,8 +124,7 @@ function updatePageLanguage() {
 
   // Update header date
   document.querySelector("#date span").textContent = t.header.saveTheDate;
-  document.querySelector("#date").lastChild.textContent =
-    " " + t.header.dateLocation;
+  document.querySelector("#date").lastChild.textContent = " ";
 
   // Update landing title
   const titleWords = t.landing.title.split(" ");
