@@ -84,9 +84,10 @@ async function loadLanguage(lang) {
   try {
     const res = await fetch(`./${lang}.json`);
     const translations = await res.json();
-
+    const untranslatedKeys = ["saveTheBone"];
     // 3. Replace text for each ID
     for (const id in translations) {
+      if (untranslatedKeys.includes(id)) continue;
       const el = document.getElementById(id);
       if (el) {
         // Special handling for elements with nested content (info_welcome has info_description span)
