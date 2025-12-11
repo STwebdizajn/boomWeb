@@ -639,7 +639,7 @@ select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url('./arrow.svg');
+  background-image: url("./arrow.svg");
   background-repeat: no-repeat;
   background-position: right 15px center;
   background-size: 16px;
