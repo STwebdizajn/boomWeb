@@ -140,8 +140,13 @@ document.getElementById("language_button").addEventListener("click", () => {
 document.querySelectorAll("#excelForm input").forEach((input) => {
   const origPlaceholder = input.getAttribute("data-placeholder-key");
   if (!origPlaceholder) {
-    // Store original placeholder key
-    input.setAttribute("data-placeholder-key", input.name);
+    // Prefer using the input's `id` when it already follows the
+    // `form_...` naming convention (avoids colliding with other keys
+    // like `form_title` which is used for the form heading). Fall
+    // back to the `name` attribute otherwise.
+    const keyToStore =
+      input.id && input.id.startsWith("form_") ? input.id : input.name;
+    input.setAttribute("data-placeholder-key", keyToStore);
   }
 });
 
@@ -153,7 +158,9 @@ window.loadLanguage = async function (lang) {
   // Update form input placeholders
   document.querySelectorAll("#excelForm input").forEach((input) => {
     const key = input.getAttribute("data-placeholder-key") || input.name;
-    const formKey = `form_${key}`;
+    // If the stored key already starts with `form_` use it directly,
+    // otherwise prefix with `form_` to match translation keys.
+    const formKey = key.startsWith("form_") ? key : `form_${key}`;
 
     // Try to get translation from localStorage cache or fetch
     fetch(`./${lang}.json`)
@@ -251,10 +258,14 @@ form.addEventListener("submit", async (e) => {
       alert("Form submitted successfully!");
       form.reset(); // Optional: clear the form after submission
     } else {
-      alert("Error submitting form.");
+      alert(
+        "Error submitting form. Please try again or contact info@boomkongres.com."
+      );
     }
   } catch (err) {
-    alert("Network or server error.");
+    alert(
+      "Network or server error. Please try again or contact info@boomkongres.com."
+    );
     console.error(err);
   }
 });

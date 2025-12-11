@@ -5,7 +5,7 @@
   "schedule": "Raspored",
   "fees": "Naknade",
   "registerNow": "Registruj se",
-  "saveTheDate": "POŠALJI SADA!",
+  "saveTheDate": "REGISTRUJ SE ODMAH!",
   "landing_title": "Balkan Osstem <br /> osseointegration <br /> meeting",
   "info_title": "Save the bone",
   "info_welcome": "Čast nam je da vam poželimo dobrodošlicu na Balkan Osstem osseointegration meeting 2026 (BOOM 26), koji će se održati u predivnom multikulturalnom gradu Sarajevu 15-16 maja 2026. godine.",
@@ -55,7 +55,6 @@
   "form_submit": "Pošalji",
   "form_name": "Ime",
   "form_surname": "Prezime",
-  "form_title_label": "Titula",
   "form_organization": "Organizacija",
   "form_city": "Grad",
   "form_country": "Država",
@@ -70,5 +69,12 @@
   "speaker_zoran": "Prof. dr. Zoran Tatić",
   "speaker_zoran_topics": "Long implants in posterior maxilla",
   "speaker_vladimir": "Prof. dr. Vladimir Biočanin",
-  "speaker_vladimir_topics": "Split crest with esset kit"
+  "speaker_vladimir_topics": "Split crest with esset kit",
+  "select_subject": "Naslov...",
+  "select_lectures1": "Praktični kursevi",
+  "select_lectures2": "Predavanja + 1 kurs",
+  "select_lectures3": "Predavanja + 2 kursa",
+  "select_lectures4": "20 Hiossen implanata + hirurški set (specijalna ponuda)",
+  "select_lectures5": "1000KM odabranih Hiossen artikala (specijalna ponuda)",
+  "select_lectures6": "2000KM odabranih Hiossen artikala (specijalna ponuda)"
 }

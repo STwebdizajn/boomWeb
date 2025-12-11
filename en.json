@@ -55,7 +55,6 @@
   "form_submit": "Send",
   "form_name": "Name",
   "form_surname": "Surname",
-  "form_title_label": "Title",
   "form_organization": "Organization",
   "form_city": "City",
   "form_country": "Country",
@@ -70,5 +69,12 @@
   "speaker_zoran": "Prof. dr. Zoran Tatić",
   "speaker_zoran_topics": "Long implants in posterior maxilla",
   "speaker_vladimir": "Prof. dr. Vladimir Biočanin",
-  "speaker_vladimir_topics": "Split crest with esset kit"
+  "speaker_vladimir_topics": "Split crest with esset kit",
+  "select_subject": "Subject...",
+  "select_lectures1": "Hands-On Course",
+  "select_lectures2": "Lectures + 1 course",
+  "select_lectures3": "Lectures + 2 courses",
+  "select_lectures4": "20 Hiossen implants and one surgical kit (special offer)",
+  "select_lectures5": "1000KM of selected Hiossen items (special offer)",
+  "select_lectures6": "2000KM of selected Hiossen items (special offer)"
 }

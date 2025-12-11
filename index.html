@@ -203,8 +203,8 @@
         <div class="timeEventContainer">
           <p class="time">16.00 - 18.00h</p>
           <p class="activity">
-            <span class="blackText">HANDS-ON Taper Kit</span> <br />
-            Dr. Nicolas Widmer (CH)
+            <span class="blackText">HANDS-ON CAS Kit</span> <br />
+            Dr. Leonardo Muzzi (IT)
           </p>
         </div>
       </div>
@@ -409,11 +409,35 @@
           id="form_surname"
           required
         /><br />
+        <select name="subject" required>
+          <option id="select_subject" value="" disabled selected>
+            Subject...
+          </option>
+          <option id="select_lectures1" value="lecture1">
+            Hands-On Course
+          </option>
+          <option id="select_lectures2" value="lecture2">
+            Lectures + 1 course
+          </option>
+          <option id="select_lectures3" value="lecture3">
+            Lectures + 2 courses
+          </option>
+          <option id="select_lectures4" value="lecture4">
+            20 Hiossen implants and one surgical kit (special offer)
+          </option>
+          <option id="select_lectures5" value="lecture5">
+            1000KM of selected Hiossen items (special offer)
+          </option>
+          <option id="select_lectures6" value="lecture6">
+            2000KM of selected Hiossen items (special offer)
+          </option>
+        </select>
+        <br />
         <input
           type="text"
-          name="title"
-          placeholder="Title"
-          id="form_title_label"
+          name="email"
+          placeholder="Email"
+          id="form_email"
           required
         /><br />
         <input
@@ -448,6 +472,12 @@
           <button id="form_submit" type="submit">Send</button>
         </div>
       </form>
+    </div>
+
+    <div class="help_container">
+      <p id="help_text">
+        For any questions, please contact us at info@boomkongres.com
+      </p>
     </div>
 
     <div id="footer_container">

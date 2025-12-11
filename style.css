@@ -602,7 +602,7 @@ a {
   flex-direction: column;
   align-items: center;
   flex: 1 1 auto; /* allows shrinking */
-  padding-bottom: 120px;
+  padding-bottom: 40x;
 }
 
 #form_container h3 {
@@ -618,7 +618,8 @@ a {
   align-items: center;
 }
 
-#form_container input {
+#form_container input,
+select {
   border: 1px solid #00ade9;
   font-family: "br_omegaregular", sans-serif;
   font-size: clamp(18px, 3vw, 28px);
@@ -632,6 +633,28 @@ a {
   box-sizing: border-box;
 
   outline: none;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8 11L2 5h12z" fill="black"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+select option {
+  border: 1px solid #00ade9;
+  background-color: white;
+  color: #1e1e1e;
+}
+
+select:focus {
+  border-color: #e68a40;
+  box-shadow: 0 0 2px #e68a40;
 }
 
 input:-webkit-autofill {
@@ -671,6 +694,18 @@ input:-webkit-autofill {
 input:focus {
   border-color: #e68a40 !important; /* orange border */
   box-shadow: 0 0 2px #e68a40; /* glowing orange shadow */
+}
+
+.help_container {
+  display: flex;
+  justify-content: center;
+  font-family: "br_omegaregular", sans-serif;
+  font-size: clamp(18px, 3vw, 28px);
+  color: #bec0c1;
+  max-width: var(--form-input-width);
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 85px;
 }
 
 /* FORM STYLES -------------------------------*/
