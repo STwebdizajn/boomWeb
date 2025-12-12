@@ -16,7 +16,6 @@
   "schedule_day1_label": "(Day 1)",
   "schedule_day2_date": "16/05/2026",
   "schedule_day2_label": "(Day 2)",
-  "fees_title": "Fees",
   "fees_lectures_title": "Lectures",
   "fees_lectures_header": "Registration type",
   "fees_lectures_deadline": "Deadline",
@@ -76,5 +75,6 @@
   "select_lectures3": "Lectures + 2 courses",
   "select_lectures4": "20 Hiossen implants and one surgical kit (special offer)",
   "select_lectures5": "1000KM of selected Hiossen items (special offer)",
-  "select_lectures6": "2000KM of selected Hiossen items (special offer)"
+  "select_lectures6": "2000KM of selected Hiossen items (special offer)",
+  "help_text": "For any questions, please contact us at <a href=\"mailto:info@boomkongres.com\">info@boomkongres.ba</a>"
 }
