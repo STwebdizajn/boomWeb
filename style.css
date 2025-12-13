@@ -994,6 +994,10 @@ input:focus {
   }
   .fees-row {
     grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid black;
+  }
+  .fees-row-special {
+    grid-template-columns: 1fr auto;
   }
   .specialBorder::after {
     width: 100%;
