@@ -1002,4 +1002,7 @@ input:focus {
   .specialBorder::after {
     width: 100%;
   }
+  .noBorder {
+    border-bottom: none;
+  }
 }
