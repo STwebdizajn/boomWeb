@@ -358,8 +358,6 @@ a {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 /* INFO STYLES -------------------------------*/
@@ -576,8 +574,19 @@ a {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 16px;
   padding: 12px 0;
-  border-bottom: 1px solid rgba(30, 30, 30, 0.3);
-  align-items: center;
+  align-items: flex-start;
+
+  position: relative;
+}
+
+.specialBorder::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 75%;
+  height: 1px;
+  background-color: rgba(30, 30, 30, 0.3);
 }
 
 .fees-row-3col {
@@ -982,5 +991,11 @@ input:focus {
   }
   #info_container div h3 {
     padding-left: 0px;
+  }
+  .fees-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .specialBorder::after {
+    width: 100%;
   }
 }

@@ -303,23 +303,24 @@
             <span id="fees_lectures_fee2">Fee</span>
             <span></span>
           </div>
-          <div class="fees-row" id="fees_lectures_early">
+          <div class="fees-row specialBorder" id="fees_lectures_early">
             <span id="fees_lectures_early_type">Early</span>
             <span id="fees_lectures_early_deadline">By April 15th</span>
             <span id="fees_lectures_early_fee">200KM</span>
-            <button
-              type="button"
-              data-value="Lectures"
-              class="select-btn"
-              id="testbtn"
-            >
-              SELECT
-            </button>
           </div>
+
           <div class="fees-row noBorder" id="fees_lectures_late">
             <span id="fees_lectures_late_type">Late</span>
             <span id="fees_lectures_late_deadline">After April 15th</span>
             <span id="fees_lectures_late_fee">250KM</span>
+            <button
+              type="button"
+              data-value="Lectures"
+              class="select-btn"
+              id="select-btn"
+            >
+              SELECT
+            </button>
           </div>
         </div>
 
@@ -334,22 +335,23 @@
             <span id="fees_lectures_fee">Fee</span>
             <span></span>
           </div>
-          <div class="fees-row" id="fees_handson_early">
+          <div class="fees-row specialBorder" id="fees_handson_early">
             <span id="fees_handson_early_type">Early</span>
             <span id="fees_handson_early_deadline">By April 15th</span>
             <span id="fees_handson_early_fee">400KM</span>
-            <button
-              type="button"
-              data-value="Hands-On Course"
-              class="select-btn"
-            >
-              SELECT
-            </button>
           </div>
           <div class="fees-row noBorder" id="fees_handson_late">
             <span id="fees_handson_late_type">Late</span>
             <span id="fees_handson_late_deadline">After April 15th</span>
             <span id="fees_handson_late_fee">600KM</span>
+            <button
+              type="button"
+              data-value="Hands-On Course"
+              class="select-btn"
+              id="select-btn"
+            >
+              SELECT
+            </button>
           </div>
         </div>
 
@@ -370,6 +372,7 @@
               type="button"
               data-value="Lectures + 1 course"
               class="select-btn"
+              id="select-btn"
             >
               SELECT
             </button>
@@ -383,6 +386,7 @@
               type="button"
               data-value="Lectures + 2 courses"
               class="select-btn"
+              id="select-btn"
             >
               SELECT
             </button>
@@ -409,6 +413,7 @@
               type="button"
               data-value="20 Hiossen implants and one surgical kit (special offer)"
               class="select-btn"
+              id="select-btn"
             >
               SELECT
             </button>
@@ -424,6 +429,7 @@
               type="button"
               data-value="1000KM of selected Hiossen items (special offer)"
               class="select-btn"
+              id="select-btn"
             >
               SELECT
             </button>
@@ -445,6 +451,7 @@
               type="button"
               data-value="2000KM of selected Hiossen items (special offer)"
               class="select-btn"
+              id="select-btn"
             >
               SELECT
             </button>
@@ -551,7 +558,6 @@
           placeholder="Phone"
           id="form_phone"
           required
-          pattern="^\+?\d{7,15}$"
         /><br />
         <div id="submitContainer">
           <button id="form_submit" type="submit">Send</button>
