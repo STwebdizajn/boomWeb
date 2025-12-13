@@ -301,11 +301,20 @@
             >
             <span id="fees_lectures_deadline2">Deadline</span>
             <span id="fees_lectures_fee2">Fee</span>
+            <span></span>
           </div>
           <div class="fees-row" id="fees_lectures_early">
             <span id="fees_lectures_early_type">Early</span>
-            <span id="fees_lectures_early_deadline">by April 15th</span>
+            <span id="fees_lectures_early_deadline">By April 15th</span>
             <span id="fees_lectures_early_fee">200KM</span>
+            <button
+              type="button"
+              data-value="Lectures"
+              class="select-btn"
+              id="testbtn"
+            >
+              SELECT
+            </button>
           </div>
           <div class="fees-row noBorder" id="fees_lectures_late">
             <span id="fees_lectures_late_type">Late</span>
@@ -323,11 +332,19 @@
             >
             <span id="fees_lectures_deadline">Deadline</span>
             <span id="fees_lectures_fee">Fee</span>
+            <span></span>
           </div>
           <div class="fees-row" id="fees_handson_early">
             <span id="fees_handson_early_type">Early</span>
-            <span id="fees_handson_early_deadline">by April 15th</span>
+            <span id="fees_handson_early_deadline">By April 15th</span>
             <span id="fees_handson_early_fee">400KM</span>
+            <button
+              type="button"
+              data-value="Hands-On Course"
+              class="select-btn"
+            >
+              SELECT
+            </button>
           </div>
           <div class="fees-row noBorder" id="fees_handson_late">
             <span id="fees_handson_late_type">Late</span>
@@ -339,21 +356,36 @@
         <!-- Lectures + Hands-On Courses -->
         <div class="fees-block">
           <h3 id="fees_combo_title">Lectures + Hands-On Courses</h3>
-          <div class="fees-row fees-row-2col thickBorderBottom">
+          <div class="fees-row fees-row-3col thickBorderBottom">
             <span class="blackTextFees" id="fees_combo_header">Package</span>
             <span id="fees_combo_fee">Fee</span>
+            <span></span>
           </div>
-          <div class="fees-row fees-row-2col" id="fees_combo_1course">
+          <div class="fees-row fees-row-3col" id="fees_combo_1course">
             <span id="fees_combo_1course_package"
               >Lectures + 1 course of choice</span
             >
             <span id="fees_combo_1course_fee">500KM</span>
+            <button
+              type="button"
+              data-value="Lectures + 1 course"
+              class="select-btn"
+            >
+              SELECT
+            </button>
           </div>
-          <div class="fees-row fees-row-2col noBorder" id="fees_combo_2course">
+          <div class="fees-row fees-row-3col noBorder" id="fees_combo_2course">
             <span id="fees_combo_2course_package"
               >Lectures + 2 courses of choice</span
             >
             <span id="fees_combo_2course_fee">800KM</span>
+            <button
+              type="button"
+              data-value="Lectures + 2 courses"
+              class="select-btn"
+            >
+              SELECT
+            </button>
           </div>
         </div>
 
@@ -361,32 +393,61 @@
         <div class="fees-block">
           <h3 id="fees_special_title">Special Offers</h3>
           <div
-            class="fees-row fees-row-1col thickBorderBottom"
+            class="fees-row fees-row-special thickBorderBottom"
             id="fees_special_implants"
           >
-            <span class="blackTextFees" id="fees_special_implants_condition"
-              >20 Hiossen implants and a surgical kit</span
+            <span class="special-text">
+              <span class="blackTextFees" id="fees_special_implants_condition"
+                >20 Hiossen implants and a surgical kit</span
+              >
+              →
+              <span id="fees_special_implants_benefit"
+                >Free lectures + both hands-on courses</span
+              >
+            </span>
+            <button
+              type="button"
+              data-value="20 Hiossen implants and one surgical kit (special offer)"
+              class="select-btn"
             >
-            →
-            <span id="fees_special_implants_benefit"
-              >Free lectures + both hands-on courses</span
-            >
+              SELECT
+            </button>
           </div>
-          <div class="fees-row fees-row-1col" id="fees_special_1000km">
-            <span class="blackTextFees" id="fees_special_1000km_condition"
-              >Spend 1000KM on selected items</span
+          <div class="fees-row fees-row-special" id="fees_special_1000km">
+            <span class="special-text">
+              <span class="blackTextFees" id="fees_special_1000km_condition"
+                >Spend 1000KM on selected items</span
+              >
+              → <span id="fees_special_1000km_benefit">Free lectures</span>
+            </span>
+            <button
+              type="button"
+              data-value="1000KM of selected Hiossen items (special offer)"
+              class="select-btn"
             >
-            →
-            <span id="fees_special_1000km_benefit">Free lectures</span>
+              SELECT
+            </button>
           </div>
-          <div class="fees-row fees-row-1col noBorder" id="fees_special_2000km">
-            <span class="blackTextFees" id="fees_special_2000km_condition"
-              >Spend 2000KM on selected items</span
+          <div
+            class="fees-row fees-row-special noBorder"
+            id="fees_special_2000km"
+          >
+            <span class="special-text">
+              <span class="blackTextFees" id="fees_special_2000km_condition"
+                >Spend 2000KM on selected items</span
+              >
+              →
+              <span id="fees_special_2000km_benefit"
+                >Free lectures + 1 hands-on course of choice</span
+              >
+            </span>
+            <button
+              type="button"
+              data-value="2000KM of selected Hiossen items (special offer)"
+              class="select-btn"
             >
-            →
-            <span id="fees_special_2000km_benefit"
-              >Free lectures + 1 hands-on course of choice</span
-            >
+              SELECT
+            </button>
           </div>
         </div>
       </div>
@@ -394,7 +455,7 @@
 
     <div id="form_container">
       <h3 style="color: #00ade9" id="form_title">Register now</h3>
-      <form id="excelForm" required pattern="^\+?\d{7,15}$">
+      <form id="excelForm">
         <input
           type="text"
           name="name"
@@ -409,9 +470,12 @@
           id="form_surname"
           required
         /><br />
-        <select name="subject" required>
+        <select id="select_container" name="subject" required>
           <option id="select_subject" value="" disabled selected>
             Subject...
+          </option>
+          <option class="options" id="general_lectures" value="Lectures">
+            Lectures
           </option>
           <option class="options" id="select_lectures1" value="Hands-On Course">
             Hands-On Course
@@ -487,6 +551,7 @@
           placeholder="Phone"
           id="form_phone"
           required
+          pattern="^\+?\d{7,15}$"
         /><br />
         <div id="submitContainer">
           <button id="form_submit" type="submit">Send</button>
@@ -530,6 +595,6 @@
       </div>
     </div>
 
-    <script src="/main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

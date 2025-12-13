@@ -427,9 +427,7 @@ a {
 }
 
 .activity {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: wrap;
 }
 /* MEET STYLES -------------------------------*/
 
@@ -535,19 +533,18 @@ a {
 /* FEES STYLES *******************************/
 
 .fees-section {
-  font-family: "br_omega300", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family: "br_omega300", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
   font-weight: normal;
   font-size: clamp(15.6px, 4vw, 28px);
   line-height: clamp(15.4px, 7vw, 35px);
-
   background-color: #b9e5fb;
   color: #1e1e1e;
   padding: 20px 20px 6vw;
 }
 
 .fees-title {
-  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
   font-weight: bold;
   color: #00ade9;
@@ -570,29 +567,33 @@ a {
   font-weight: bold;
   margin-bottom: 24px;
   font-size: clamp(15.6px, 4vw, 36px);
-  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
-  font-weight: bold;
 }
 
 .fees-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 16px;
   padding: 12px 0;
   border-bottom: 1px solid rgba(30, 30, 30, 0.3);
+  align-items: center;
 }
 
-.fees-row-2col {
-  grid-template-columns: 1fr 1fr;
+.fees-row-3col {
+  grid-template-columns: 2fr 1fr 1fr;
 }
 
-.fees-row-1col {
+.fees-row-special {
+  grid-template-columns: 1fr auto;
+}
+
+.special-text {
   display: block;
 }
 
 .blackTextFees {
-  font-family: "br_omegablack", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family: "br_omegablack", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
   font-weight: bold;
 }
@@ -603,6 +604,28 @@ a {
 
 .noBorder {
   border-bottom: none;
+}
+
+.select-btn {
+  background-color: #1e1e1e;
+  color: #b9e5fb;
+  border: none;
+  padding: 8px 20px;
+  font-size: clamp(10px, 2vw, 14px);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.select-btn:hover {
+  background-color: #333333;
+}
+
+.select-btn.selected {
+  background-color: #b9e5fb;
+  border: 3px solid #1e1e1e;
+  color: #1e1e1e;
 }
 
 /* FEES STYLES -------------------------------*/

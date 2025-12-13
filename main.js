@@ -283,3 +283,40 @@ window.addEventListener("load", () => {
         : "./images/header_imgs/flagbosnia.webp";
   }
 });
+
+// Button-Select Synchronization - ADD THIS AT THE END OF main.js
+document.addEventListener("DOMContentLoaded", function () {
+  var select = document.getElementById("select_container");
+  if (!select) {
+    console.error("Select not found");
+    return;
+  }
+
+  function updateButtonClasses() {
+    var buttons = document.querySelectorAll(".select-btn");
+    for (var i = 0; i < buttons.length; i++) {
+      var button = buttons[i];
+      var isSelected = button.getAttribute("data-value") === select.value;
+      if (isSelected) {
+        button.classList.add("selected");
+        button.textContent = "SELECTED";
+      } else {
+        button.classList.remove("selected");
+        button.textContent = "SELECT";
+      }
+    }
+  }
+
+  var buttons = document.querySelectorAll(".select-btn");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      select.value = this.getAttribute("data-value");
+      updateButtonClasses();
+    });
+  }
+
+  select.addEventListener("change", updateButtonClasses);
+  updateButtonClasses();
+});
