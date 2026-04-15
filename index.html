@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -368,14 +368,17 @@
               >Lectures + 1 course of choice</span
             >
             <span id="fees_combo_1course_fee">500KM</span>
-            <button
-              type="button"
-              data-value="Lectures + 1 course"
-              class="select-btn"
-              id="select-btn"
+            <select
+              id="courseSelect"
+              name="selectedCourse"
+              class="select-dropdown"
+              aria-label="Choose hands-on course"
+              required
             >
-              SELECT
-            </button>
+              <option value="" disabled selected>SELECT COURSE</option>
+              <option value="HANDS-ON Taper Kit">HANDS-ON Taper Kit</option>
+              <option value="HANDS-ON CAS Kit">HANDS-ON CAS Kit</option>
+            </select>
           </div>
           <div class="fees-row fees-row-3col noBorder" id="fees_combo_2course">
             <span id="fees_combo_2course_package"
@@ -489,17 +492,24 @@
           </option>
           <option
             class="options"
-            id="select_lectures2"
-            value="Lectures + 1 course"
-          >
-            Lectures + 1 course
-          </option>
-          <option
-            class="options"
             id="select_lectures3"
             value="Lectures + 2 courses"
           >
             Lectures + 2 courses
+          </option>
+          <option
+            class="options"
+            id="select_lectures7"
+            value="Lectures + HANDS-ON Taper Kit"
+          >
+            Lectures + HANDS-ON Taper Kit
+          </option>
+          <option
+            class="options"
+            id="select_lectures8"
+            value="Lectures + HANDS-ON CAS Kit"
+          >
+            Lectures + HANDS-ON CAS Kit
           </option>
           <option
             class="options"

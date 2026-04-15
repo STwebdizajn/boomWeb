@@ -251,7 +251,7 @@ form.addEventListener("submit", async (e) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
-      }
+      },
     );
 
     if (response.ok) {
@@ -259,12 +259,12 @@ form.addEventListener("submit", async (e) => {
       form.reset(); // Optional: clear the form after submission
     } else {
       alert(
-        "Error submitting form. Please try again or contact info@boomkongres.com."
+        "Error submitting form. Please try again or contact info@boomkongres.com.",
       );
     }
   } catch (err) {
     alert(
-      "Network or server error. Please try again or contact info@boomkongres.com."
+      "Network or server error. Please try again or contact info@boomkongres.com.",
     );
     console.error(err);
   }
@@ -305,6 +305,16 @@ document.addEventListener("DOMContentLoaded", function () {
         button.textContent = "SELECT";
       }
     }
+
+    // Reset courseSelect if not selecting the specific combo
+    var courseSelect = document.getElementById("courseSelect");
+    if (
+      courseSelect &&
+      select.value !== "Lectures + HANDS-ON Taper Kit" &&
+      select.value !== "Lectures + HANDS-ON CAS Kit"
+    ) {
+      courseSelect.value = "";
+    }
   }
 
   var buttons = document.querySelectorAll(".select-btn");
@@ -313,6 +323,14 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       e.stopPropagation();
       select.value = this.getAttribute("data-value");
+      updateButtonClasses();
+    });
+  }
+
+  var courseSelect = document.getElementById("courseSelect");
+  if (courseSelect) {
+    courseSelect.addEventListener("change", function () {
+      select.value = "Lectures + " + courseSelect.value;
       updateButtonClasses();
     });
   }

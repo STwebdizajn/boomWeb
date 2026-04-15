@@ -76,7 +76,8 @@ a {
 
 @font-face {
   font-family: "br_omegamedium";
-  src: url("./fonts/lexend-v26-latin-500.woff2") format("woff2"),
+  src:
+    url("./fonts/lexend-v26-latin-500.woff2") format("woff2"),
     url("./fonts/lexend-v26-latin-500.woff") format("woff");
   font-weight: medium;
   font-style: normal;
@@ -85,7 +86,8 @@ a {
 
 @font-face {
   font-family: "br_omegablack";
-  src: url("./fonts/lexend-v26-latin-700.woff2") format("woff2"),
+  src:
+    url("./fonts/lexend-v26-latin-700.woff2") format("woff2"),
     url("./fonts/lexend-v26-latin-700.woff") format("woff");
   font-weight: medium;
   font-style: normal;
@@ -94,8 +96,10 @@ a {
 
 @font-face {
   font-family: "br_omegaregular";
-  src: url("./fonts/lexend-v26-latin-regular.woff2") format("woff2"),
-    format("woff2"), url("./fonts/lexend-v26-latin-regular.woff") format("woff");
+  src:
+    url("./fonts/lexend-v26-latin-regular.woff2") format("woff2"),
+    format("woff2"),
+    url("./fonts/lexend-v26-latin-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -103,8 +107,10 @@ a {
 
 @font-face {
   font-family: "br_omega300";
-  src: url("./fonts/lexend-v26-latin-300.woff2") format("woff2"),
-    format("woff2"), url("./fonts/lexend-v26-latin-300.woff") format("woff");
+  src:
+    url("./fonts/lexend-v26-latin-300.woff2") format("woff2"),
+    format("woff2"),
+    url("./fonts/lexend-v26-latin-300.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -112,7 +118,8 @@ a {
 
 @font-face {
   font-family: "br_omegabold";
-  src: url("./fonts/lexend-v26-latin-700.woff2") format("woff2"),
+  src:
+    url("./fonts/lexend-v26-latin-700.woff2") format("woff2"),
     url("./fonts/lexend-v26-latin-800.woff") format(("woff"));
   font-weight: normal;
   font-style: normal;
@@ -121,7 +128,8 @@ a {
 
 @font-face {
   font-family: "br_omegalight";
-  src: url("./fonts/lexend-v26-latin-200.woff2") format("woff2"),
+  src:
+    url("./fonts/lexend-v26-latin-200.woff2") format("woff2"),
     url("./fonts/lexend-v26-latin-200.woff");
   font-weight: normal;
   font-style: normal;
@@ -233,7 +241,8 @@ a {
 }
 
 #saveTheDate {
-  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family:
+    "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
   font-weight: bold;
   font-size: clamp(20px, 4vw, 50px);
@@ -331,7 +340,8 @@ a {
 }
 
 #info_container div h3 {
-  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family:
+    "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
   font-weight: bold;
   font-size: clamp(20px, 8vw, 59.5px);
@@ -343,8 +353,8 @@ a {
 }
 
 #info_container div p {
-  font-family: "br_omegalight", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
-    sans-serif;
+  font-family:
+    "br_omegalight", "Grotek", "Styrene", "NN Nouvelle Grotesk STD", sans-serif;
   font-weight: 400;
   font-size: clamp(14px, 3vw, 28px);
 
@@ -372,7 +382,8 @@ a {
 }
 
 #meet_container h3 {
-  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family:
+    "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
   font-weight: bold;
   font-size: clamp(33px, 7vw, 59.5px);
@@ -445,8 +456,8 @@ a {
   color: #f2f2f3;
   letter-spacing: var(--letter-spacing, 1.2px);
   font-size: clamp(12px, 3vw, 24px);
-  font-family: "br_omega300", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
-    sans-serif;
+  font-family:
+    "br_omega300", "Grotek", "Styrene", "NN Nouvelle Grotesk STD", sans-serif;
   font-weight: medium;
 
   line-height: var(--line-height);
@@ -456,7 +467,8 @@ a {
 }
 
 #schedule_container h3 {
-  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family:
+    "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
   font-weight: bold;
   font-size: clamp(24px, 5vw + 1rem, 59.5px);
@@ -467,8 +479,8 @@ a {
 
 .dayText1,
 .dayText2 {
-  font-family: "br_omegamedium", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
-    sans-serif;
+  font-family:
+    "br_omegamedium", "Grotek", "Styrene", "NN Nouvelle Grotesk STD", sans-serif;
   font-weight: bold;
   font-size: clamp(17px, 5vw, 28px);
 }
@@ -512,8 +524,8 @@ a {
 }
 
 .blackText {
-  font-family: "br_omegablack", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
-    sans-serif;
+  font-family:
+    "br_omegablack", "Grotek", "Styrene", "NN Nouvelle Grotesk STD", sans-serif;
   font-weight: bold;
 }
 
@@ -531,8 +543,8 @@ a {
 /* FEES STYLES *******************************/
 
 .fees-section {
-  font-family: "br_omega300", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
-    sans-serif;
+  font-family:
+    "br_omega300", "Grotek", "Styrene", "NN Nouvelle Grotesk STD", sans-serif;
   font-weight: normal;
   font-size: clamp(15.6px, 4vw, 28px);
   line-height: clamp(15.4px, 7vw, 35px);
@@ -542,7 +554,8 @@ a {
 }
 
 .fees-title {
-  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family:
+    "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
   font-weight: bold;
   color: #00ade9;
@@ -565,7 +578,8 @@ a {
   font-weight: bold;
   margin-bottom: 24px;
   font-size: clamp(15.6px, 4vw, 36px);
-  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family:
+    "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
 }
 
@@ -602,8 +616,8 @@ a {
 }
 
 .blackTextFees {
-  font-family: "br_omegablack", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
-    sans-serif;
+  font-family:
+    "br_omegablack", "Grotek", "Styrene", "NN Nouvelle Grotesk STD", sans-serif;
   font-weight: bold;
 }
 
@@ -627,7 +641,8 @@ a {
   white-space: nowrap;
 }
 
-.select-btn:hover {
+.select-btn:hover,
+.select-dropdown:hover {
   background-color: #333333;
 }
 
@@ -635,6 +650,35 @@ a {
   background-color: #b9e5fb;
   border: 3px solid #1e1e1e;
   color: #1e1e1e;
+}
+
+.select-dropdown:has(option:not(:first-child):checked) {
+  background-color: #b9e5fb;
+  border: 3px solid #1e1e1e;
+  color: #1e1e1e;
+}
+
+.select-dropdown {
+  background-color: #1e1e1e;
+  color: #b9e5fb;
+  border: none;
+  padding: 8px 32px;
+  font-size: clamp(10px, 2vw, 14px);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  max-height: 131px;
+  height: 59px;
+}
+
+.select-dropdown option {
+  background-color: #1e1e1e;
+  color: #b9e5fb;
 }
 
 /* FEES STYLES -------------------------------*/
@@ -685,7 +729,7 @@ select {
   -moz-appearance: none;
   background-image: url("./arrow.svg");
   background-repeat: no-repeat;
-  background-position: right 15px center;
+  background-position: right 11px center;
   background-size: clamp(12px, 3vw, 28px);
   background-color: white;
   padding-right: 45px;
@@ -778,7 +822,8 @@ input:focus {
 }
 
 #footer_container p {
-  font-family: "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
+  font-family:
+    "br_omegaregular", "Grotek", "Styrene", "NN Nouvelle Grotesk STD",
     sans-serif;
   font-weight: 400;
   font-size: clamp(16px, 3vw, 24px);
